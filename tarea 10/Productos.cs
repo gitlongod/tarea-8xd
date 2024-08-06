@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tarea_10
 {
-    internal class Productos
+    public class Productos
     {
         public string ID  { get; set; }
         public string Name { get; set; }
@@ -18,5 +18,6 @@ namespace tarea_10
             Name = name;
             Price = price;
         }
+        
     }
 }
