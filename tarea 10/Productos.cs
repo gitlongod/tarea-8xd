@@ -88,7 +88,9 @@ namespace tarea_10
                 Console.WriteLine("La Lista de los Productos Registrados es:");
                 foreach (Productos product in productsList)
                 {
+                    Console.WriteLine($"\n ID: {product.ID}");
                     Console.WriteLine($"\nNombre: {product.Name}");
+                    Console.WriteLine($"\n Precio : {product.Price}");
                     Console.WriteLine($"\nTipo: {product.Type}");
                     Console.WriteLine("\n-------------------");
                 }
