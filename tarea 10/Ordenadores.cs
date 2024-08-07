@@ -8,7 +8,7 @@ namespace tarea_10
 {
     internal class Ordenadores : Productos
     {
-        public Ordenadores(string id, string name, double price) : base(id, name, price) 
+        public Ordenadores(string id, string name, double price, string type) : base(id, name, price, type) 
         {
 
         }
