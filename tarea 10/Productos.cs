@@ -18,49 +18,49 @@ namespace tarea_10
         public string Type { get; set; }
       
 
-        public Productos(string iD, string name, double price, string type)
+        public Productos(string id, string name, double price, string type)
         {
-            ID = iD;
+            ID = id;
             Name = name;
             Price = price;
             Type = type;
         }
 
-        public static void AddProduct(ref List<Productos> productsList ref )
+        public static void AddProduct(ref List<Productos> productsList  )
         {
             Console.Clear();
             Console.WriteLine("Ingrese el ID del producto");
-            string idProduct = Console.ReadLine();
+            string id = Console.ReadLine();
 
             Console.WriteLine("Ingrese el Nombre del Producto");
             string name = Console.ReadLine();
             Console.WriteLine("Ingrese el Precio del Producto");
-            double priceProduct = double.Parse(Console.ReadLine());
+            double price = double.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese el tipo de producto");
-            string type = Console.ReadLine();
+            string type = "";
             int option = MenuAddProduct();
             switch (option)
             {
                 case 1:
-                    type = "Teléfono";
-                    productsList.Add(new Telefonos(ID, name, price,type ));
+                    type = "telefono";
+                    productsList.Add(new Telefonos(id, name, price,type ));
                     Console.WriteLine("\nProducto Agregado con Éxito");
                     Console.ReadKey();
                     break;
                 case 2:
                     type = "Ordenador";
-                    productsList.Add(new Ordenadores(name, type));
+                    productsList.Add(new Ordenadores(id, name, price,type));
                     Console.WriteLine("\nProducto Agregado con Éxito");
                     Console.ReadKey();
                     break;
                 case 3:
                     type = "Tablet";
-                    productsList.Add(new Tablets(name, type));
+                    productsList.Add(new Tablets(id,name,price, type));
                     Console.WriteLine("\nProducto Agregado con Éxito");
                     Console.ReadKey();
                     break;
                 default:
-                    Console.WriteLine("\nIngrese una Opción Válida (1 - 3)");
+                    Console.WriteLine("\nIngrese una Opción Válida");
                     Console.ReadKey();
                     break;
             }
@@ -89,7 +89,7 @@ namespace tarea_10
                 foreach (Productos product in productsList)
                 {
                     Console.WriteLine($"\nNombre: {product.Name}");
-                    Console.WriteLine($"\nTipo: {product.type}");
+                    Console.WriteLine($"\nTipo: {product.Type}");
                     Console.WriteLine("\n-------------------");
                 }
                 Console.ReadKey();
@@ -116,7 +116,7 @@ namespace tarea_10
                         if (product.Name == name)
                         {
                             Console.WriteLine($"\nNombre: {product.Name}");
-                            Console.WriteLine($"\nTipo: {product.type}");
+                            Console.WriteLine($"\nTipo: {product.Type}");
                             Console.ReadKey();
                         }
                     }
