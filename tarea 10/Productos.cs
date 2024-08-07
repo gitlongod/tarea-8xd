@@ -15,7 +15,7 @@ namespace tarea_10
         public string ID { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
-        public string type { get; set; }
+        public string Type { get; set; }
       
 
         public Productos(string iD, string name, double price, string type)
@@ -23,7 +23,7 @@ namespace tarea_10
             ID = iD;
             Name = name;
             Price = price;
-            this.type = type;
+            Type = type;
         }
 
         public static void AddProduct(ref List<Productos> productsList ref )
